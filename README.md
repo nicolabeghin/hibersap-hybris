@@ -5,15 +5,16 @@ Simple [Hibersap](http://hibersap.org/index.html) integration for [SAP Hybris pl
 ========
 
 Use as any other standard Hybris extension. It's designed to be used as a singleton
-* add hibersap to *config/localextensions.xml*
-* add hibersap to your calling module's *extensioninfo.xml*
+* add `hibersap-core-x.x.x.jar` to `hibersap/lib` folder
+* add hibersap to `config/localextensions.xml`
+* add hibersap to your calling module's `extensioninfo.xml`
 * inject Spring reference to Hibersap service in your calling module
 
 ```java
 @Resource(name = "hibersapService")
 private HibersapService hibersapService;
 ```
-* refer your RFC destination in *hibersap/resources/hibersap-spring.xml*
+* refer your RFC destination in `hibersap/resources/hibersap-spring.xml`
 ```xml
 <property name="rfcDestinationName" value="ECC_TST_CONNECTION" />
 ```
